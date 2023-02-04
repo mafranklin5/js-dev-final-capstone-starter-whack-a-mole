@@ -21,7 +21,7 @@ let difficulty = "hard";
  *
  */
 function randomInteger(min, max) {
-  // return Math.floor(Math.random() * (max - min + 1)) + min;
+   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 /**
@@ -41,6 +41,13 @@ function randomInteger(min, max) {
  */
 function setDelay(difficulty) {
   // TODO: Write your code here.
+  if (difficulty === "easy") {
+    setTimeout(1500);
+  } else if (difficulty === "normal") {
+    setTimeout(1000);
+  } else if (difficulty === "hard") {
+     return randomInteger(600, 1200);
+  }
   
 }
 
@@ -60,6 +67,13 @@ function setDelay(difficulty) {
  */
 function chooseHole(holes) {
   // TODO: Write your code here.
+  const index = randomInteger(0, 8);
+  const hole = holes[index];
+  if (hole === lastHole) {
+    return chooseHole(holes);
+  }
+  lastHole = hole;
+  return hole;
 
 }
 
