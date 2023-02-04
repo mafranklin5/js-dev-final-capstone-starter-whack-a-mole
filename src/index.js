@@ -210,7 +210,7 @@ function whack(event) {
 function setEventListeners(){
   // TODO: Write your code here
 
-  return moles;
+  return nifflers;
 }
 
 /**
@@ -260,7 +260,7 @@ window.startGame = startGame;
 window.gameOver = gameOver;
 window.showUp = showUp;
 window.holes = holes;
-window.moles = moles;
+window.nifflers = nifflers;
 window.showAndHide = showAndHide;
 window.points = points;
 window.updateScore = updateScore;
