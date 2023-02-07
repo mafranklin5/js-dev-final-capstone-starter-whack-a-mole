@@ -63,7 +63,7 @@ h2 {
   pointer-events:none;
 }
 
-.niffler {
+.mole {
   /*background:url('./assets/mole.png') bottom center no-repeat;*/
   background:url('https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/mole.png?raw=true') bottom center no-repeat;
   background-size: 40%;
@@ -76,7 +76,7 @@ h2 {
   pointer-events:auto;
 }
 
-.hole.show .niffler {
+.hole.show .mole {
   top: 0;
   /*transform: scale(1.1);*/
 }
