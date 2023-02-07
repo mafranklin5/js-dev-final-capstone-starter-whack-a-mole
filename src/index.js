@@ -1,5 +1,5 @@
 const holes = document.querySelectorAll('.hole');
-const nifflers = document.querySelectorAll('.niffler');
+const moles = document.querySelectorAll('.mole');
 const startButton = document.querySelector('#start');
 // TODO: Add the missing query selectors:
 const score = document.querySelector('#score'); // Use querySelector() to get the score element
@@ -42,9 +42,15 @@ function randomInteger(min, max) {
 function setDelay(difficulty) {
   // TODO: Write your code here.
   if (difficulty === "easy") {
-    setTimeout(1500);
+    return 1500;
+   /*setTimeout(() => {
+      console.log("Delayed for 1.5 seconds.");
+    }, "1500");*/
   } else if (difficulty === "normal") {
-    setTimeout(1000);
+      return 1000;
+    /*setTimeout(() => {
+      console.log("Delayed for 1 second.");
+    }, "1000");*/
   } else if (difficulty === "hard") {
      return randomInteger(600, 1200);
   }
@@ -120,7 +126,7 @@ function gameOver() {
 */
 function showUp() {
   let delay = setDelay(difficulty); // TODO: Update so that it uses setDelay()
-  const hole = chooseHole(hole);  // TODO: Update so that it use chooseHole()
+  const hole = chooseHole(holes);  // TODO: Update so that it use chooseHole()
   return showAndHide(hole, delay);
 }
 
@@ -150,22 +156,11 @@ function showAndHide(hole, delay){
 * a given hole. It returns the hole.
 *
 */
-function toggleVisibility(hole){
+function toggleVisibility(holes){
   // TODO: add hole.classList.toggle so that it adds or removes the 'show' class.
-  let hole = chooseHole(holes);
-
-// highlight random hole
-  hole.classList.toggle("highlight");
-  console.log(hole.innerHTML);
-  console.log(hole.classList);
-
-// choose another hole and highlight it too
-  hole = chooseHole(holes);
-  hole.classList.toggle("highlight");
-  console.log(hole.innerHTML);
-  console.log(hole.classList);
-  
-  return hole;
+  //let hole = chooseHole(holes);
+  holes.classList.toggle("show");
+  return holes;
 }
 
 /**
@@ -180,6 +175,8 @@ function toggleVisibility(hole){
 */
 function updateScore() {
   // TODO: Write your code here
+  points++;
+  console.log(points);
 
   return points;
 }
@@ -193,8 +190,8 @@ function updateScore() {
 */
 function clearScore() {
   // TODO: Write your code here
-  // points = 0;
-  // score.textContent = points;
+  points = 0;
+  score.textContent = points;
   return points;
 }
 
@@ -206,6 +203,10 @@ function clearScore() {
 function updateTimer() {
   // TODO: Write your code here.
   // hint: this code is provided to you in the instructions.
+  if (time > 0){
+    time -= 1;
+    timerDisplay.textContent = time;
+  }
   
   return time;
 }
@@ -219,6 +220,7 @@ function updateTimer() {
 function startTimer() {
   // TODO: Write your code here
   // timer = setInterval(updateTimer, 1000);
+  timer = setInterval(updateTimer, 1000);
   return timer;
 }
 
@@ -233,6 +235,8 @@ function startTimer() {
 function whack(event) {
   // TODO: Write your code here.
   // call updateScore()
+  console.log("whack!")
+  updateScore();
   return points;
 }
 
@@ -243,9 +247,13 @@ function whack(event) {
 */
 function setEventListeners(){
   // TODO: Write your code here
-
-  return nifflers;
+  moles.forEach(
+    mole => mole.addEventListener('click', whack)
+  );
+  return moles;
 }
+
+setEventListeners();
 
 /**
 *
@@ -294,7 +302,7 @@ window.startGame = startGame;
 window.gameOver = gameOver;
 window.showUp = showUp;
 window.holes = holes;
-window.nifflers = nifflers;
+window.moles = moles;
 window.showAndHide = showAndHide;
 window.points = points;
 window.updateScore = updateScore;
