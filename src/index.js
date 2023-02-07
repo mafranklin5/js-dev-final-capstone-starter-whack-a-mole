@@ -176,8 +176,8 @@ function toggleVisibility(holes){
 function updateScore() {
   // TODO: Write your code here
   points++;
+  score.textContent = points;
   console.log(points);
-
   return points;
 }
 
@@ -235,7 +235,7 @@ function startTimer() {
 function whack(event) {
   // TODO: Write your code here.
   // call updateScore()
-  console.log("whack!")
+  console.log("whack!");
   updateScore();
   return points;
 }
@@ -248,12 +248,12 @@ function whack(event) {
 function setEventListeners(){
   // TODO: Write your code here
   moles.forEach(
-    mole => mole.addEventListener('click', whack)
+    mole => mole.addEventListener("click", whack)
   );
   return moles;
 }
 
-setEventListeners();
+
 
 /**
 *
@@ -285,6 +285,8 @@ function stopGame(){
 *
 */
 function startGame(){
+  setEventListeners();
+  startTimer();
   setDuration(10);
   showUp();
   return "game started";
