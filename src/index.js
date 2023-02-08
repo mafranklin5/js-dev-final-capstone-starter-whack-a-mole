@@ -285,11 +285,11 @@ function stopGame(){
 *
 */
 function startGame(){
+  points = 0;
   setEventListeners();
   startTimer();
   setDuration(10);
   showUp();
-  points = 0;
   return "game started";
 }
 
