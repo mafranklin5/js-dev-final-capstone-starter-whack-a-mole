@@ -53,8 +53,8 @@ h2 {
 .hole:after {
   display: block;
   /*background: url("./assets/hole.png") bottom center no-repeat;*/
-  /*background: url("https://github.com/mafranklin5/js-dev-final-capstone-starter-whack-a-mole/blob/main/assets/briefcase.jpeg") bottom center no-repeat;*/
-  background: url("https://github.com/mafranklin5/js-dev-final-capstone-starter-whack-a-mole/blob/main/assets/hole.png") bottom center no-repeat;
+  background: url("https://github.com/mafranklin5/js-dev-final-capstone-starter-whack-a-mole/raw/main/assets/briefcase.jpeg") bottom center no-repeat;
+  /*background: url("https://github.com/mafranklin5/js-dev-final-capstone-starter-whack-a-mole/blob/main/assets/hole.png") bottom center no-repeat;*/
   background-size:contain;
   content:'';
   width: 100%;
