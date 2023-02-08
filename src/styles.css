@@ -67,7 +67,7 @@ h2 {
 
 .mole {
   /*background:url('./assets/mole.png') bottom center no-repeat;*/
-  background:url('https://github.com/mafranklin5/js-dev-final-capstone-starter-whack-a-mole/blob/main/assets/niffler.png') bottom center no-repeat;
+  background:url('https://github.com/mafranklin5/js-dev-final-capstone-starter-whack-a-mole/raw/main/assets/niffler.png') bottom center no-repeat;
   background-size: 40%;
   position: absolute;
   top: 100%;
