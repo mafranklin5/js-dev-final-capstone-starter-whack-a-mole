@@ -289,6 +289,7 @@ function startGame(){
   startTimer();
   setDuration(10);
   showUp();
+  points = 0;
   return "game started";
 }
 
