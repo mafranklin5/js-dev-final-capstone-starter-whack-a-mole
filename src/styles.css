@@ -1,7 +1,7 @@
 html {
   /*background: url('./assets/background.png') no-repeat center center fixed;*/
   /*background: url('https://github.com/mafranklin5/js-dev-final-capstone-starter-whack-a-mole/raw/main/assets/whack%20a%20mole%20background.jpeg') no-repeat center center fixed;*/
-  background: url("https://github.com/mafranklin5/js-dev-final-capstone-starter-whack-a-mole/raw/main/assets/background.png") no-repeat center center fixed;
+  background: url("https://github.com/mafranklin5/js-dev-final-capstone-starter-whack-a-mole/raw/main/assets/forest%20background.png") no-repeat center center fixed;
   box-sizing: border-box;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -41,7 +41,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  /*cursor: url('./assets/mallet.png'), pointer;*/
+  cursor: url('https://github.com/mafranklin5/js-dev-final-capstone-starter-whack-a-mole/raw/main/assets/mallet.png'), pointer;
 }
 
 .hole {
